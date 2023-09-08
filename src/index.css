@@ -15,15 +15,20 @@ code {
     monospace;
 }
 
+.container__gallery-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .container__image-gallery {
-  height: 100vh;
+  height: 90vh;
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
-  align-content: center;
-  justify-content: center;
-  overflow: scroll;
+  justify-items: center;
+  overflow: auto;
 }
 
 .img__image-gallery {
@@ -50,3 +55,16 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+.container__lightbox-element__close-icon {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  z-index: 101;
+}
+
+.container__lightbox-element__close-icon:hover {
+  cursor: pointer;
+  
+}
+
