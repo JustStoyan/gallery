@@ -25,11 +25,12 @@ code {
   height: 90vh;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
   justify-items: center;
   overflow: auto;
 }
+
 
 .img__image-gallery {
   position: relative;
@@ -65,6 +66,6 @@ code {
 
 .container__lightbox-element__close-icon:hover {
   cursor: pointer;
-  
 }
+
 

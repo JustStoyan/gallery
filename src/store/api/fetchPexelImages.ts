@@ -18,7 +18,7 @@ export const pexelApi = createApi({
       query: (category: string) => `search/?${category}`,
     }),
     searchForCuratedImages: builder.query({
-      query: () => "curated/?per_page=50",
+      query: () => "curated/?per_page=80",
     }),
     searchForPhoto: builder.query({
       query: (photoId: number) => `/photos/${photoId}`,

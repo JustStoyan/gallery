@@ -8,6 +8,7 @@ import { Outlet } from "react-router-dom";
 
 export const ImageGallery = () => {
   const dispatch = useDispatch();
+  
   const photoCollection = useSelector(
     (state: any) => state.photo.photoCollection
   );
@@ -33,9 +34,10 @@ export const ImageGallery = () => {
         return currentPhoto.photographer === selectedPhtographer;
       }
     })
-    .map((photo: any) => {
+    .map((photo: any, index: string) => {
       return (
         <Image
+          title={index}
           id={photo.id}
           key={photo.id}
           src={photo.src.landscape}

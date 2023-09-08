@@ -1,0 +1,10 @@
+.container__lightbox-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+.container__lightbox-image svg:hover {
+    cursor: pointer;
+}
