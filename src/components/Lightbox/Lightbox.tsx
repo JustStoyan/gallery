@@ -3,6 +3,7 @@ import { useSearchForPhotoQuery } from "../../store/api/fetchPexelImages";
 import { CloseIcon } from "./Icons/CloseIcon";
 import { LoadingState } from "./LoadingState";
 import { LightboxImage } from "./LightBoxImage";
+import "./lightbox.css";
 
 export const Lightbox = () => {
   const navigate = useNavigate();

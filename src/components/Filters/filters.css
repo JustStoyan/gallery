@@ -8,3 +8,23 @@
   align-items: center;
   gap: 2rem;
 }
+
+@media screen and (max-width: 440px) {
+  .container__filters {
+    display: flex;
+    width: 440px;
+    margin: 10px;
+    overflow: hidden;
+  }
+
+  .filters__select-filter,
+  .filters__text-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filters__select-filter {
+    width: 5rem;
+  }
+}

@@ -3,11 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 interface FilterInterface {
   filterByPhotographer: string;
   filterByName: string;
+  showFiltersOnMobile: boolean;
 }
 
 const initialFiltersState: FilterInterface = {
   filterByPhotographer: "all",
   filterByName: "",
+  showFiltersOnMobile: false,
 };
 
 const filterSlice = createSlice({

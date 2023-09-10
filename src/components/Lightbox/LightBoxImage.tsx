@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { NextIcon } from "./Icons/NextIcon";
 import { PreviouseIcon } from "./Icons/PreviouseIcon";
-import "./lightbox-image.css";
+
 
 import { useSelector } from "react-redux";
 

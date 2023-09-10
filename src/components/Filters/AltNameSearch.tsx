@@ -15,7 +15,7 @@ export const AltNameSearch = () => {
     dispatch(filterActions.changeNameFilter(e.target.value));
   };
   return (
-    <div>
+    <div className="filters__text-filter">
       <label htmlFor="search">Search</label>
       <input
         onChange={changeTextHandler}

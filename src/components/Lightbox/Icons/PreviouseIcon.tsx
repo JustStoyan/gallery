@@ -1,6 +1,6 @@
 export const PreviouseIcon = ({onClick}:any) => {
   return (
-    <div onClick={onClick}>
+    <div className="lightbox__prev-icon" onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="150px"

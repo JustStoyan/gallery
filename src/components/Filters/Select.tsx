@@ -14,7 +14,7 @@ export const Select = (props: any) => {
   };
 
   return (
-    <div>
+    <div className="filters__select-filter">
       <label htmlFor={props.selectName}>{props.selectName}</label>
       <select
         onChange={selectOptionHandler}
