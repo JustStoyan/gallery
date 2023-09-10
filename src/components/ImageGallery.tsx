@@ -35,7 +35,6 @@ export const ImageGallery = () => {
       }
     })
     .map((photo: any, index: string) => {
-      console.log(photo.photographer);
       return (
         <Image
           title={index}

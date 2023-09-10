@@ -3,7 +3,6 @@ import { useState } from "react";
 import { NextIcon } from "./Icons/NextIcon";
 import { PreviouseIcon } from "./Icons/PreviouseIcon";
 
-
 import { useSelector } from "react-redux";
 
 export const LightboxImage = ({ src, alt }: any) => {
