@@ -33,6 +33,7 @@ code {
 
 .container__image-gallery--list {
   display: flex;
+  position: relative;
   flex-direction: column;
   margin: 30px;
   gap: 30px;
