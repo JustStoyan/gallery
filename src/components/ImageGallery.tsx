@@ -8,7 +8,7 @@ import { Outlet } from "react-router-dom";
 
 export const ImageGallery = () => {
   const dispatch = useDispatch();
-  
+  const viewStyle = useSelector((state: any) => state.photo.viewStyle);
   const photoCollection = useSelector(
     (state: any) => state.photo.photoCollection
   );
@@ -35,13 +35,15 @@ export const ImageGallery = () => {
       }
     })
     .map((photo: any, index: string) => {
+      console.log(photo.photographer);
       return (
         <Image
           title={index}
           id={photo.id}
           key={photo.id}
-          src={photo.src.landscape}
+          src={viewStyle === 'grid'? photo.src.landscape : photo.src.large}
           alt={photo.alt}
+          photographer={photo.photographer}
         />
       );
     });
@@ -53,7 +55,13 @@ export const ImageGallery = () => {
 
   return (
     <>
-      <div className="container__image-gallery">
+      <div
+        className={
+          viewStyle === "grid"
+            ? "container__image-gallery"
+            : "container__image-gallery--list"
+        }
+      >
         {filteredImages.length === 0 ? <EmptyGallery /> : filteredImages}
       </div>
       <Outlet />

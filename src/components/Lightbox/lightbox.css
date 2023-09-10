@@ -33,6 +33,27 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 1440px) {
+  .container__lightbox-element {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .container__lightbox-image img {
+    width: 1400px;
+  }
+
+  .lightbox__prev-icon {
+    position: absolute;
+    left: -15px;
+  }
+  .lightbox__next-icon {
+    position: absolute;
+    right: -15px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .container__lightbox-element {
     width: 100vw;
@@ -42,6 +63,15 @@
 
   .container__lightbox-image img {
     width: 700px;
+  }
+
+  .lightbox__prev-icon {
+    position: absolute;
+    left: -15px;
+  }
+  .lightbox__next-icon {
+    position: absolute;
+    right: -15px;
   }
 }
 

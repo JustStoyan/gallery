@@ -1,10 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,500;9..40,700&family=Lato:wght@300;400&family=Roboto+Mono:ital,wght@0,400;1,500&display=swap");
 body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Lato", "Roboto Mono", "DM Sans", sans-serif, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
@@ -28,7 +27,23 @@ code {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
   justify-items: center;
+  align-items: center;
   overflow: auto;
+}
+
+.container__image-gallery--list {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  gap: 30px;
+  height: 70vh;
+  overflow-y: auto;
+}
+
+.img__image-with-info {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 
 .img__image-gallery {
@@ -43,16 +58,39 @@ code {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1500px) {
+  .img__image-gallery {
+    width: 180px;
+  }
+}
 
-
-
-
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 900px) {
   .container__gallery-page {
     overflow: hidden;
   }
   .container__image-gallery {
-    height: 100vh;
+    height: 80vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.1px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .img__image-gallery {
+    position: relative;
+    width: 270px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container__gallery-page {
+    overflow: hidden;
+  }
+  .container__image-gallery {
+    height: 80vh;
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 130px);

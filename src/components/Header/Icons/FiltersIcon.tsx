@@ -1,7 +1,6 @@
 export const FiltersIcon = () => {
   return (
     <svg
-      className="header-element__toggle-filters-icon"
       xmlns="http://www.w3.org/2000/svg"
       fill="#000000"
       height="30px"

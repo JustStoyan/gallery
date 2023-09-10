@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { photoActions } from "../store/slices/photoSlice";
+import { ImageInfo } from "./ImageInfo";
 
 export interface ImageData {
   alt?: string;
@@ -15,19 +16,20 @@ export interface ImageData {
   url?: string;
   width?: number;
   onClick?: Function;
-  title: string;
+  title?: string;
 }
 
 export const Image = (props: ImageData) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const viewStyle = useSelector((state: any) => state.photo.viewStyle);
 
   const openLightboxHandler = (e: any) => {
     dispatch(photoActions.updateIndex(e.target.title));
     navigate(`/lightbox/${e.target.id}`);
   };
   return (
-    <div>
+    <div className={viewStyle !== "grid" ? "img__image-with-info" : ""}>
       <img
         className="img__image-gallery"
         title={props.title}
@@ -36,6 +38,7 @@ export const Image = (props: ImageData) => {
         alt={props.alt || "Untitled"}
         onClick={openLightboxHandler}
       />
+      {viewStyle !== "grid" && <ImageInfo {...props} />}
     </div>
   );
 };

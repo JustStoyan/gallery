@@ -3,7 +3,10 @@ import { useSelector } from "react-redux";
 import "./filters.css";
 import { AltNameSearch } from "./AltNameSearch";
 
+
 export const Filters = () => {
+
+  const showFilters = useSelector((state:any) => state.filter.toggleFilters)
   const photoCollection = useSelector(
     (state: any) => state.photo.photoCollection
   );
@@ -19,15 +22,14 @@ export const Filters = () => {
     })
     .map((currentPhoto: any) => currentPhoto.photographer);
 
-  const filterCollectionHandler = (e: any) => {};
+  
 
   return (
-    <div className="container__filters">
+    <div className={!showFilters ? "container__filters" : "container__filters--hidden"}>
       <AltNameSearch />
       <Select
         selectName="Photographers"
         options={photographers}
-        onChange={filterCollectionHandler}
       />
     </div>
   );

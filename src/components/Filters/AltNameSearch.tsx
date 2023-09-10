@@ -23,6 +23,7 @@ export const AltNameSearch = () => {
         type="text"
         name="search"
         id="search"
+        placeholder="Search for name"
       />
     </div>
   );

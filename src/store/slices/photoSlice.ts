@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialPhotos = {
   photoCollection: [],
   imageIndex: 0,
+  viewStyle: 'grid'
 };
 
 const photoSlice = createSlice({
@@ -17,6 +18,10 @@ const photoSlice = createSlice({
       const newIndex = action.payload;
       state.imageIndex = newIndex;
     },
+    changeView(state,action) {
+      const newView = action.payload;
+      state.viewStyle = newView;
+    }
   },
 });
 

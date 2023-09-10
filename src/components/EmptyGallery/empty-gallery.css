@@ -7,3 +7,25 @@
     align-self: center;
     justify-self: center;
 }
+
+
+@media screen and (max-width: 1500px) {
+    .container__empty-gallery {
+        position: absolute;
+        top: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 900px) {
+    .container__empty-gallery {
+        position: absolute;
+        top: 0;
+    }
+
+    .container__empty-gallery img {
+       display: none;
+    }
+
+}

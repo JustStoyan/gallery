@@ -3,13 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 interface FilterInterface {
   filterByPhotographer: string;
   filterByName: string;
-  showFiltersOnMobile: boolean;
+  toggleFilters: boolean;
 }
 
 const initialFiltersState: FilterInterface = {
   filterByPhotographer: "all",
   filterByName: "",
-  showFiltersOnMobile: false,
+  toggleFilters: false,
 };
 
 const filterSlice = createSlice({
@@ -24,6 +24,9 @@ const filterSlice = createSlice({
       const newNameFilter = action.payload;
       state.filterByName = newNameFilter;
     },
+    changeToggle(state) {
+      state.toggleFilters = !state.toggleFilters;
+    }
   },
 });
 
